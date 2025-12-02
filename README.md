@@ -109,4 +109,4 @@ Proprietary - All rights reserved
 
 ---
 
-**Built with ❤️ for the $500/month SaaS goal**
+**Built with ❤️ by Sayan Chakraborty for the $500/month SaaS goal**
