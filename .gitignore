@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Backups
+*.zip
+*.bak
+*.tmp
+
+# IDE
+.vscode/
+.idea/

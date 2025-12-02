@@ -1,0 +1,168 @@
+// Timble Extension - Popup Logic
+// Handles user interactions and communicates with background script
+
+// DOM Elements
+const fullPageBtn = document.getElementById('fullPageBtn');
+const liveScrollBtn = document.getElementById('liveScrollBtn');
+const areaSelectBtn = document.getElementById('areaSelectBtn');
+const statusMsg = document.getElementById('statusMsg');
+const loadingOverlay = document.getElementById('loadingOverlay');
+const upgradeSection = document.getElementById('upgradeSection');
+const upgradeBtn = document.getElementById('upgradeBtn');
+const usageCount = document.getElementById('usageCount');
+const usageBadge = document.getElementById('usageBadge');
+
+// Constants
+const DAILY_FREE_LIMIT = 10;
+const PRO_FEATURES = ['liveScroll', 'areaSelect'];
+
+// Initialize on popup open
+document.addEventListener('DOMContentLoaded', async () => {
+  await updateUsageDisplay();
+  setupEventListeners();
+  checkProStatus();
+});
+
+// Event Listeners
+function setupEventListeners() {
+  fullPageBtn.addEventListener('click', () => captureScreenshot('fullPage'));
+  liveScrollBtn.addEventListener('click', () => captureScreenshot('liveScroll'));
+  areaSelectBtn.addEventListener('click', () => captureScreenshot('areaSelect'));
+  upgradeBtn.addEventListener('click', handleUpgrade);
+}
+
+// Main Screenshot Capture Function
+async function captureScreenshot(type) {
+  try {
+    // Check if user has Pro or if it's a free feature
+    const isPro = await checkProStatus();
+    const isFreeFeature = type === 'fullPage';
+    
+    if (!isFreeFeature && !isPro) {
+      // Check daily limit for premium features
+      const usage = await getUsageToday();
+      if (usage >= DAILY_FREE_LIMIT) {
+        showUpgradePrompt();
+        return;
+      }
+    }
+
+    // Show loading state
+    showLoading(true);
+    disableButtons(true);
+    
+    // Send message to background script
+    const response = await chrome.runtime.sendMessage({
+      action: 'captureScreenshot',
+      type: type
+    });
+
+    if (response.success) {
+      showStatus('Screenshot captured successfully! ✓', 'success');
+      
+      // Increment usage for premium features if not Pro
+      if (!isFreeFeature && !isPro) {
+        await incrementUsage();
+        await updateUsageDisplay();
+      }
+    } else {
+      showStatus('Error: ' + response.error, 'error');
+    }
+  } catch (error) {
+    showStatus('Failed to capture screenshot', 'error');
+    console.error('Capture error:', error);
+  } finally {
+    showLoading(false);
+    disableButtons(false);
+  }
+}
+
+// Usage Tracking Functions
+async function getUsageToday() {
+  const today = new Date().toDateString();
+  const result = await chrome.storage.local.get(['usageDate', 'usageCount']);
+  
+  // Reset if it's a new day
+  if (result.usageDate !== today) {
+    await chrome.storage.local.set({ usageDate: today, usageCount: 0 });
+    return 0;
+  }
+  
+  return result.usageCount || 0;
+}
+
+async function incrementUsage() {
+  const today = new Date().toDateString();
+  const usage = await getUsageToday();
+  await chrome.storage.local.set({ 
+    usageDate: today, 
+    usageCount: usage + 1 
+  });
+}
+
+async function updateUsageDisplay() {
+  const usage = await getUsageToday();
+  const remaining = Math.max(0, DAILY_FREE_LIMIT - usage);
+  
+  usageCount.textContent = remaining;
+  
+  if (remaining === 0) {
+    usageBadge.style.background = 'rgba(239, 68, 68, 0.3)';
+    usageCount.style.color = '#fca5a5';
+  } else if (remaining <= 3) {
+    usageBadge.style.background = 'rgba(251, 191, 36, 0.3)';
+    usageCount.style.color = '#fde047';
+  }
+}
+
+// Pro Status Check
+async function checkProStatus() {
+  const result = await chrome.storage.local.get(['isPro', 'licenseKey']);
+  const isPro = result.isPro || false;
+  
+  // Update UI based on Pro status
+  if (isPro) {
+    document.querySelectorAll('.pro-badge').forEach(badge => {
+      badge.style.display = 'none';
+    });
+    usageBadge.style.display = 'none';
+  }
+  
+  return isPro;
+}
+
+// Upgrade Handling
+function showUpgradePrompt() {
+  upgradeSection.style.display = 'block';
+  showStatus('Daily limit reached! Upgrade to Pro for unlimited access', 'info');
+}
+
+function handleUpgrade() {
+  // For MVP: Open a simple payment/license page
+  // In production, this would integrate with Stripe or similar
+  chrome.tabs.create({ 
+    url: 'https://timble.app/upgrade' // Replace with your actual upgrade page
+  });
+}
+
+// UI Helper Functions
+function showLoading(show) {
+  loadingOverlay.style.display = show ? 'flex' : 'none';
+}
+
+function disableButtons(disable) {
+  fullPageBtn.disabled = disable;
+  liveScrollBtn.disabled = disable;
+  areaSelectBtn.disabled = disable;
+}
+
+function showStatus(message, type) {
+  statusMsg.textContent = message;
+  statusMsg.className = `status ${type}`;
+  
+  // Auto-hide after 3 seconds
+  setTimeout(() => {
+    statusMsg.textContent = '';
+    statusMsg.className = 'status';
+  }, 3000);
+}

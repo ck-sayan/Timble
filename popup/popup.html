@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timble Screenshot</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+          <circle cx="12" cy="12" r="3" fill="currentColor"/>
+        </svg>
+        <h1>Timble</h1>
+      </div>
+      <div class="usage-badge" id="usageBadge">
+        <span id="usageCount">10</span>/10 today
+      </div>
+    </div>
+
+    <!-- Screenshot Options -->
+    <div class="options">
+      <!-- FREE: Full Page Screenshot -->
+      <button class="option-btn primary" id="fullPageBtn">
+        <div class="btn-icon">📄</div>
+        <div class="btn-content">
+          <div class="btn-title">Full Page</div>
+          <div class="btn-subtitle">Capture entire page • FREE</div>
+        </div>
+      </button>
+
+      <!-- PREMIUM: Live Scrollable Screenshot -->
+      <button class="option-btn" id="liveScrollBtn">
+        <div class="btn-icon">🎬</div>
+        <div class="btn-content">
+          <div class="btn-title">Live Scrollable</div>
+          <div class="btn-subtitle">Captures animations • PRO</div>
+        </div>
+        <div class="pro-badge">PRO</div>
+      </button>
+
+      <!-- PREMIUM: Specific Area Screenshot -->
+      <button class="option-btn" id="areaSelectBtn">
+        <div class="btn-icon">✂️</div>
+        <div class="btn-content">
+          <div class="btn-title">Select Area</div>
+          <div class="btn-subtitle">Choose specific region • PRO</div>
+        </div>
+        <div class="pro-badge">PRO</div>
+      </button>
+    </div>
+
+    <!-- Status Message -->
+    <div class="status" id="statusMsg"></div>
+
+    <!-- Upgrade CTA -->
+    <div class="upgrade-section" id="upgradeSection" style="display: none;">
+      <div class="upgrade-content">
+        <h3>🚀 Upgrade to Pro</h3>
+        <p>Unlock live scrollable & area screenshots</p>
+        <button class="upgrade-btn" id="upgradeBtn">Get Pro - $4.99/month</button>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+      <div class="spinner"></div>
+      <p>Capturing screenshot...</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

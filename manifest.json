@@ -1,0 +1,36 @@
+{
+  "manifest_version": 3,
+  "name": "Timble - Smart Screenshot Tool",
+  "version": "1.0.0",
+  "description": "Capture full-page, live scrollable, and specific area screenshots with ease",
+  
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "storage"
+  ],
+  
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  }
+}
