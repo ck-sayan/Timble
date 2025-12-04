@@ -117,3 +117,6 @@ function handleCaptureComplete(message, type) {
         console.error('Capture reported failure:', message.error);
     }
 }
+
+
+// NOTE: Temporary workaround
