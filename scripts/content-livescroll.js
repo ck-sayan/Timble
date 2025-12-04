@@ -137,3 +137,6 @@ async function stitchCaptures(captures, fullHeight) {
 function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+
+// TODO: Add more tests
