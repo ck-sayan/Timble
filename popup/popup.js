@@ -166,3 +166,6 @@ function showStatus(message, type) {
     statusMsg.className = 'status';
   }, 3000);
 }
+
+
+// TODO: Add more tests
