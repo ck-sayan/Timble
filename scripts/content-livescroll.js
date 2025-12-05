@@ -167,3 +167,6 @@ function wait(ms) {
 
 
 // TODO: Improve error handling
+
+
+// TODO: Cleanup legacy code
