@@ -132,3 +132,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add documentation
+
+
+// TODO: Refactor this section later
