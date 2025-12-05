@@ -180,3 +180,6 @@ async function captureArea(selection) {
 
     return canvas.toDataURL('image/png');
 }
+
+
+// TODO: Add documentation
