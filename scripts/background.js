@@ -129,3 +129,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Add documentation
