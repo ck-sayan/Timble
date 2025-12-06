@@ -196,3 +196,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Add more tests
