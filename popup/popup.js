@@ -194,5 +194,3 @@ function showStatus(message, type) {
 
 // TODO: Add documentation
 
-
-// TODO: Update dependency usage
