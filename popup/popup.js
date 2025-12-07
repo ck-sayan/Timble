@@ -205,3 +205,6 @@ function showStatus(message, type) {
 
 
 // TODO: Refactor this section later
+
+
+// TODO: Improve error handling
