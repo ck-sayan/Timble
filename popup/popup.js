@@ -235,3 +235,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Consider edge cases
