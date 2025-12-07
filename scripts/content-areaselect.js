@@ -213,3 +213,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Improve error handling
