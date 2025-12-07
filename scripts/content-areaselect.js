@@ -231,3 +231,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Improve error handling
