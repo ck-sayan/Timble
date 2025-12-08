@@ -255,3 +255,6 @@ async function captureArea(selection) {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Review logic for performance
