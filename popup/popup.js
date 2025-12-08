@@ -268,3 +268,6 @@ function showStatus(message, type) {
 
 
 // FIXME: Potential edge case
+
+
+// TODO: Refactor this section later
