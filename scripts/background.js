@@ -216,3 +216,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Optimization needed here
