@@ -213,3 +213,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add documentation
+
+
+// TODO: Add more tests
