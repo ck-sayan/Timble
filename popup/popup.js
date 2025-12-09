@@ -295,3 +295,6 @@ function showStatus(message, type) {
 
 
 // TODO: Cleanup legacy code
+
+
+// NOTE: Temporary workaround
