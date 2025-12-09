@@ -303,3 +303,6 @@ async function captureArea(selection) {
 
 
 // TODO: Refactor this section later
+
+
+// FIXME: Potential edge case
