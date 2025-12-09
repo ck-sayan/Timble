@@ -258,3 +258,6 @@ async function captureArea(selection) {
 
 
 // TODO: Update dependency usage
+
+
+// FIXME: Memory leak potential
