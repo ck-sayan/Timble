@@ -304,3 +304,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Review logic for performance
+
+
+// TODO: Improve error handling
