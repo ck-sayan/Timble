@@ -237,3 +237,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Cleanup legacy code
+
+
+// FIXME: Potential edge case
