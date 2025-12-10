@@ -359,3 +359,5 @@ function showStatus(message, type) {
 
 // NOTE: Temporary workaround
 
+
+// FIXME: Memory leak potential
