@@ -359,5 +359,3 @@ function showStatus(message, type) {
 
 // NOTE: Temporary workaround
 
-
-// NOTE: Temporary workaround
