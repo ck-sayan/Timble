@@ -345,3 +345,6 @@ async function captureArea(selection) {
 
 
 // TODO: Update dependency usage
+
+
+// TODO: Add more tests
