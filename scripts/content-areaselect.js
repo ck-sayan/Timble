@@ -342,3 +342,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Update dependency usage
