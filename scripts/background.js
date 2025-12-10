@@ -306,3 +306,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Improve error handling
+
+
+// TODO: Refactor this section later
