@@ -342,3 +342,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Consider edge cases
+
+
+// NOTE: Refactor for readability
