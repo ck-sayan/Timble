@@ -345,3 +345,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Improve error handling
