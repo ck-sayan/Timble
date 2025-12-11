@@ -357,3 +357,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Optimization needed here
+
+
+// FIXME: Memory leak potential
