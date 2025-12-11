@@ -363,3 +363,6 @@ async function captureArea(selection) {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Review logic for performance
