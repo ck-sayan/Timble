@@ -379,3 +379,6 @@ function showStatus(message, type) {
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Refactor for readability
