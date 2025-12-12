@@ -373,3 +373,5 @@ async function captureArea(selection) {
 
 // TODO: Update dependency usage
 
+
+// NOTE: Optimization needed here
