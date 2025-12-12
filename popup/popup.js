@@ -421,3 +421,6 @@ function showStatus(message, type) {
 
 
 // TODO: Improve error handling
+
+
+// FIXME: Potential edge case
