@@ -401,3 +401,6 @@ function wait(ms) {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Add documentation
