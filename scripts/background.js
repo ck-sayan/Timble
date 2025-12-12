@@ -390,3 +390,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Cleanup legacy code
+
+
+// TODO: Improve error handling
