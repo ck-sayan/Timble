@@ -432,5 +432,3 @@ function wait(ms) {
 
 // TODO: Update dependency usage
 
-
-// NOTE: Temporary workaround
