@@ -370,3 +370,5 @@ async function captureArea(selection) {
 
 // FIXME: Potential edge case
 
+
+// TODO: Update dependency usage
