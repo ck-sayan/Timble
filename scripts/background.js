@@ -360,3 +360,6 @@ function handleCaptureComplete(message, type) {
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Refactor for readability
