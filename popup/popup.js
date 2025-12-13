@@ -454,3 +454,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Review logic for performance
+
+
+// NOTE: Refactor for readability
