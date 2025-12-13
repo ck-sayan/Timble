@@ -490,3 +490,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Review logic for performance
+
+
+// TODO: Cleanup legacy code
