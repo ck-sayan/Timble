@@ -448,3 +448,6 @@ function showStatus(message, type) {
 
 
 // TODO: Update dependency usage
+
+
+// NOTE: Review logic for performance
