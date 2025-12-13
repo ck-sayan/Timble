@@ -417,3 +417,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add documentation
+
+
+// TODO: Cleanup legacy code
