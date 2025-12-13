@@ -453,5 +453,3 @@ function wait(ms) {
 
 // TODO: Add documentation
 
-
-// TODO: Update dependency usage
