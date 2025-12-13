@@ -467,3 +467,6 @@ function wait(ms) {
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Refactor for readability
