@@ -420,3 +420,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Cleanup legacy code
+
+
+// NOTE: Consider edge cases
