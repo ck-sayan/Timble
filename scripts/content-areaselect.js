@@ -426,3 +426,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Refactor for readability
+
+
+// NOTE: Optimization needed here
