@@ -402,3 +402,6 @@ async function captureArea(selection) {
 
 
 // TODO: Improve error handling
+
+
+// TODO: Update dependency usage
