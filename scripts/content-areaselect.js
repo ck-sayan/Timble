@@ -441,3 +441,6 @@ async function captureArea(selection) {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Consider edge cases
