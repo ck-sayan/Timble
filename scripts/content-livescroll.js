@@ -536,3 +536,6 @@ function wait(ms) {
 
 
 // NOTE: Optimization needed here
+
+
+// NOTE: Refactor for readability
