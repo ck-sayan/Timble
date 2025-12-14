@@ -474,3 +474,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Optimization needed here
+
+
+// NOTE: Review logic for performance
