@@ -490,3 +490,5 @@ function handleCaptureComplete(message, type) {
 
 // TODO: Cleanup legacy code
 
+
+// TODO: Update dependency usage
