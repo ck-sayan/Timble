@@ -489,3 +489,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Update dependency usage
