@@ -495,3 +495,6 @@ async function captureArea(selection) {
 
 
 // TODO: Add documentation
+
+
+// TODO: Refactor this section later
