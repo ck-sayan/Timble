@@ -589,3 +589,6 @@ function showStatus(message, type) {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Consider edge cases
