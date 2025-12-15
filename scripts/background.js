@@ -495,3 +495,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Refactor this section later
+
+
+// TODO: Update dependency usage
