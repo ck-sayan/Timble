@@ -559,3 +559,6 @@ function showStatus(message, type) {
 
 
 // TODO: Add documentation
+
+
+// TODO: Cleanup legacy code
