@@ -490,5 +490,3 @@ function handleCaptureComplete(message, type) {
 
 // TODO: Cleanup legacy code
 
-
-// NOTE: Refactor for readability
