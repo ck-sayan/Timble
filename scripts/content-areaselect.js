@@ -483,3 +483,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Add documentation
