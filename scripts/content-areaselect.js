@@ -594,3 +594,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Optimization needed here
+
+
+// TODO: Cleanup legacy code
