@@ -528,3 +528,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add more tests
+
+
+// TODO: Improve error handling
