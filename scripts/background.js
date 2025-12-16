@@ -558,3 +558,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Optimization needed here
