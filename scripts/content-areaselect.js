@@ -567,3 +567,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Consider edge cases
+
+
+// FIXME: Potential edge case
