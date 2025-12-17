@@ -227,3 +227,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
         console.error('[Timble] Cleanup error:', e);
     }
 }
+
+
+// TODO: Cleanup legacy code
