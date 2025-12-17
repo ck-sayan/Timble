@@ -132,3 +132,6 @@ export default defineBackground(() => {
 
 
 // TODO: Update dependency usage
+
+
+// TODO: Improve error handling
