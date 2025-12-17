@@ -9,3 +9,6 @@ export default {
     },
     plugins: [],
 }
+
+
+// NOTE: Optimization needed here
