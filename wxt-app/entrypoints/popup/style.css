@@ -1,28 +1,33 @@
-/* Custom Font */
-@font-face {
-  font-family: 'Pacifico';
-  src: url('fonts/Pacifico-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 body {
+  @apply bg-gray-50 text-gray-900;
   width: 360px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  background: linear-gradient(135deg, #000046 20%, #1cb5e0 100%);
-  color: #fff;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Font */
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/fonts/Pacifico-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 .container {
   padding: 20px;
   position: relative;
+  background: linear-gradient(135deg, #000046 20%, #1cb5e0 100%);
+  min-height: 100vh;
+  color: white;
 }
 
 /* Header */
@@ -48,6 +53,7 @@ body {
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0.5px;
+  margin: 0;
 }
 
 .usage-badge {
@@ -87,6 +93,8 @@ body {
   position: relative;
   overflow: hidden;
   color: #fff;
+  width: 100%;
+  text-align: left;
 }
 
 .option-btn::before {

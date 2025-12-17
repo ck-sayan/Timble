@@ -2,9 +2,17 @@
 // PREMIUM FEATURE: Captures page while scrolling to trigger animations
 
 (async function () {
+    let overlay = null;
+    let originalScrollY = 0;
+    let originalOverflow = '';
+
     try {
+        // Store original state
+        originalScrollY = window.scrollY;
+        originalOverflow = document.documentElement.style.overflow;
+
         // Create overlay to show user what's happening
-        const overlay = createProgressOverlay();
+        overlay = createProgressOverlay();
         document.body.appendChild(overlay);
 
         // Get full page dimensions
@@ -15,8 +23,8 @@
         const viewportHeight = window.innerHeight;
         const scrollSteps = Math.ceil(fullHeight / viewportHeight);
 
-        // Store original position
-        const originalScrollY = window.scrollY;
+        // Hide scrollbars for cleaner capture
+        document.documentElement.style.overflow = 'hidden';
 
         // Start from top
         window.scrollTo(0, 0);
@@ -24,20 +32,17 @@
 
         const captures = [];
 
-        // Slowly scroll and capture - this triggers animations!
+        // Scroll and capture - using instant scroll to avoid conflicts
         for (let i = 0; i < scrollSteps; i++) {
             const progress = ((i + 1) / scrollSteps * 100).toFixed(0);
             updateOverlay(overlay, `Capturing... ${progress}%`);
 
             const scrollY = i * viewportHeight;
 
-            // Smooth scroll to trigger animations
-            window.scrollTo({
-                top: scrollY,
-                behavior: 'smooth'
-            });
+            // Use instant scroll to avoid conflicts with page animations
+            window.scrollTo(0, scrollY);
 
-            // Wait longer to let animations play out
+            // Wait for content to load and animations to trigger
             await wait(800);
 
             // Capture this chunk
@@ -49,24 +54,40 @@
             });
         }
 
-        // Restore scroll position
-        window.scrollTo(0, originalScrollY);
-
         // Stitch all captures
         updateOverlay(overlay, 'Processing...');
         const finalDataUrl = await stitchCaptures(captures, fullHeight);
 
-        // Clean up
-        overlay.remove();
+        // Clean up BEFORE sending message
+        cleanupPage(overlay, originalScrollY, originalOverflow);
+        overlay = null; // Mark as cleaned up
+
+        // Convert to base64 and send in chunks (like fullpage)
+        const base64 = finalDataUrl.split(',')[1];
+        const chunkSize = 1000000; // 1MB chunks
+        const chunks = [];
+        for (let i = 0; i < base64.length; i += chunkSize) {
+            chunks.push(base64.substring(i, i + chunkSize));
+        }
+
+        console.log(`[Timble Live Scroll] Sending ${chunks.length} chunks to background`);
 
         // Send result
         chrome.runtime.sendMessage({
             action: 'liveScrollCaptureComplete',
             success: true,
-            dataUrl: finalDataUrl
+            chunks: chunks,
+            totalChunks: chunks.length
         });
 
     } catch (error) {
+        console.error('[Timble Live Scroll] Capture failed:', error);
+
+        // Clean up on error
+        if (overlay) {
+            cleanupPage(overlay, originalScrollY, originalOverflow);
+        }
+
         chrome.runtime.sendMessage({
             action: 'liveScrollCaptureComplete',
             success: false,
@@ -74,6 +95,25 @@
         });
     }
 })();
+
+function cleanupPage(overlay, originalScrollY, originalOverflow) {
+    try {
+        // Remove overlay
+        if (overlay && overlay.parentNode) {
+            overlay.remove();
+        }
+
+        // Restore scroll position
+        window.scrollTo(0, originalScrollY);
+
+        // Restore overflow
+        document.documentElement.style.overflow = originalOverflow;
+
+        console.log('[Timble Live Scroll] Cleanup complete');
+    } catch (e) {
+        console.error('[Timble Live Scroll] Cleanup error:', e);
+    }
+}
 
 function createProgressOverlay() {
     const overlay = document.createElement('div');
@@ -89,16 +129,19 @@ function createProgressOverlay() {
     font-family: system-ui, -apple-system, sans-serif;
     font-size: 14px;
     font-weight: 600;
-    z-index: 999999;
+    z-index: 2147483647;
     box-shadow: 0 8px 24px rgba(0,0,0,0.3);
     backdrop-filter: blur(10px);
+    pointer-events: none;
   `;
     overlay.textContent = 'Initializing...';
     return overlay;
 }
 
 function updateOverlay(overlay, text) {
-    overlay.textContent = text;
+    if (overlay) {
+        overlay.textContent = text;
+    }
 }
 
 async function captureCurrentView() {
@@ -115,6 +158,10 @@ async function stitchCaptures(captures, fullHeight) {
     canvas.width = window.innerWidth * devicePixelRatio;
     canvas.height = fullHeight * devicePixelRatio;
     const ctx = canvas.getContext('2d');
+
+    // Fill with white background
+    ctx.fillStyle = '#FFFFFF';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     for (const capture of captures) {
         const img = new Image();

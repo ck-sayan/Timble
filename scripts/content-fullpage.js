@@ -4,21 +4,31 @@
 (async function () {
     console.log('[Timble] Full page capture started');
 
+    let originalScrollX = 0;
+    let originalScrollY = 0;
+    let originalOverflow = '';
+    let hiddenElements = [];
+
     try {
+        // Store original state
+        originalScrollX = window.scrollX;
+        originalScrollY = window.scrollY;
+        originalOverflow = document.documentElement.style.overflow;
+
         // Helper to hide fixed elements
         const hideFixedElements = () => {
             const elements = document.querySelectorAll('*');
-            const hiddenElements = [];
+            const hidden = [];
 
             elements.forEach(el => {
                 const style = window.getComputedStyle(el);
                 if ((style.position === 'fixed' || style.position === 'sticky') && el.offsetHeight > 0) {
                     el.dataset.timbleOriginalVisibility = el.style.visibility;
                     el.style.visibility = 'hidden';
-                    hiddenElements.push(el);
+                    hidden.push(el);
                 }
             });
-            return hiddenElements;
+            return hidden;
         };
 
         const restoreFixedElements = (elements) => {
@@ -42,8 +52,7 @@
         };
 
         const dimensions = getPageDimensions();
-        const originalScrollX = window.scrollX;
-        const originalScrollY = window.scrollY;
+        console.log('[Timble] Page dimensions:', dimensions);
 
         // Use overlap to prevent gaps/black lines
         const overlap = 10; // 10px overlap
@@ -51,8 +60,9 @@
         const scrollSteps = Math.ceil(dimensions.height / stepSize);
         const screenshots = [];
 
+        console.log('[Timble] Will capture', scrollSteps, 'sections');
+
         // Hide scrollbars for cleaner capture
-        const originalOverflow = document.documentElement.style.overflow;
         document.documentElement.style.overflow = 'hidden';
 
         // Capture each section
@@ -61,30 +71,53 @@
 
             // Ensure we don't scroll past the bottom
             if (scrollY + dimensions.viewportHeight > dimensions.height) {
-                scrollY = dimensions.height - dimensions.viewportHeight;
-                if (scrollY < 0) scrollY = 0;
+                scrollY = Math.max(0, dimensions.height - dimensions.viewportHeight);
             }
+
+            console.log(`[Timble] Capturing section ${i + 1}/${scrollSteps} at scrollY=${scrollY}`);
 
             window.scrollTo(0, scrollY);
 
             // Hide fixed elements after the first screenshot to avoid duplication
-            let hiddenElements = [];
             if (i > 0) {
                 hiddenElements = hideFixedElements();
             }
 
-            await new Promise(resolve => setTimeout(resolve, 300));
+            await new Promise(resolve => setTimeout(resolve, 400)); // Increased delay
 
-            const dataUrl = await new Promise((resolve, reject) => {
-                chrome.runtime.sendMessage({ action: 'captureVisibleTab' }, (response) => {
-                    if (response?.dataUrl) resolve(response.dataUrl);
-                    else reject(new Error('No data URL'));
-                });
-            });
+            // Retry logic for captureVisibleTab (Chrome rate limits after ~15 captures)
+            let dataUrl = null;
+            let retries = 3;
+
+            for (let attempt = 0; attempt < retries; attempt++) {
+                try {
+                    dataUrl = await new Promise((resolve, reject) => {
+                        chrome.runtime.sendMessage({ action: 'captureVisibleTab' }, (response) => {
+                            if (chrome.runtime.lastError) {
+                                reject(new Error(chrome.runtime.lastError.message));
+                            } else if (response?.dataUrl) {
+                                resolve(response.dataUrl);
+                            } else {
+                                reject(new Error('No data URL in response'));
+                            }
+                        });
+                    });
+                    break; // Success, exit retry loop
+                } catch (err) {
+                    console.warn(`[Timble] Capture attempt ${attempt + 1} failed:`, err.message);
+                    if (attempt < retries - 1) {
+                        // Wait longer before retry (exponential backoff)
+                        await new Promise(resolve => setTimeout(resolve, 500 * (attempt + 1)));
+                    } else {
+                        throw new Error(`Failed after ${retries} attempts: ${err.message}`);
+                    }
+                }
+            }
 
             // Restore elements immediately after capture
             if (i > 0) {
                 restoreFixedElements(hiddenElements);
+                hiddenElements = [];
             }
 
             screenshots.push({
@@ -95,13 +128,12 @@
 
             // If we reached the bottom, stop
             if (scrollY + dimensions.viewportHeight >= dimensions.height) {
+                console.log('[Timble] Reached bottom, stopping');
                 break;
             }
         }
 
-        // Restore state
-        window.scrollTo(originalScrollX, originalScrollY);
-        document.documentElement.style.overflow = originalOverflow;
+        console.log('[Timble] Captured', screenshots.length, 'sections, stitching...');
 
         // Stitch screenshots
         const canvas = document.createElement('canvas');
@@ -130,6 +162,8 @@
             });
         }
 
+        console.log('[Timble] Stitching complete, converting to blob...');
+
         // Convert to blob and send
         const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
 
@@ -144,6 +178,9 @@
 
             console.log(`[Timble] Sending ${chunks.length} chunks to background`);
 
+            // Restore page state BEFORE sending message
+            cleanupPage(originalScrollX, originalScrollY, originalOverflow, hiddenElements);
+
             chrome.runtime.sendMessage({
                 action: 'fullPageCaptureComplete',
                 success: true,
@@ -155,6 +192,10 @@
 
     } catch (error) {
         console.error('[Timble] Capture failed:', error);
+
+        // Clean up on error
+        cleanupPage(originalScrollX, originalScrollY, originalOverflow, hiddenElements);
+
         chrome.runtime.sendMessage({
             action: 'fullPageCaptureComplete',
             success: false,
@@ -162,3 +203,27 @@
         });
     }
 })();
+
+function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
+    try {
+        console.log('[Timble] Cleaning up page state...');
+
+        // Restore hidden elements
+        if (hiddenElements && hiddenElements.length > 0) {
+            hiddenElements.forEach(el => {
+                el.style.visibility = el.dataset.timbleOriginalVisibility || '';
+                delete el.dataset.timbleOriginalVisibility;
+            });
+        }
+
+        // Restore scroll position
+        window.scrollTo(scrollX, scrollY);
+
+        // Restore overflow
+        document.documentElement.style.overflow = overflow;
+
+        console.log('[Timble] Cleanup complete');
+    } catch (e) {
+        console.error('[Timble] Cleanup error:', e);
+    }
+}
