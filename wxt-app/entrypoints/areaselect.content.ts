@@ -185,3 +185,6 @@ export default defineUnlistedScript({
         }
     },
 });
+
+
+// NOTE: Refactor for readability
