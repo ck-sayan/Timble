@@ -185,3 +185,6 @@ export default App;
 
 
 // TODO: Add documentation
+
+
+// NOTE: Refactor for readability
