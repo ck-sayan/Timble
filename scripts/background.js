@@ -612,3 +612,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Cleanup legacy code
