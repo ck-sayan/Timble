@@ -4,3 +4,6 @@ export default defineContentScript({
     console.log('Hello content.');
   },
 });
+
+
+// TODO: Improve error handling
