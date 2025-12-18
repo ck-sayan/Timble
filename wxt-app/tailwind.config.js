@@ -10,3 +10,5 @@ export default {
     plugins: [],
 }
 
+
+// NOTE: Review logic for performance
