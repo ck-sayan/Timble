@@ -26,3 +26,6 @@ export default defineConfig({
   },
   modules: ['@wxt-dev/module-react'],
 });
+
+
+// TODO: Cleanup legacy code
