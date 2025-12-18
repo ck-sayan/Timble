@@ -17,3 +17,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // TODO: Cleanup legacy code
+
+
+// NOTE: Optimization needed here
