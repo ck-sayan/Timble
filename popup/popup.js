@@ -700,3 +700,6 @@ function showStatus(message, type) {
 
 
 // TODO: Add documentation
+
+
+// FIXME: Potential edge case
