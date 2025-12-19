@@ -627,3 +627,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Update dependency usage
+
+
+// FIXME: Potential edge case
