@@ -624,3 +624,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Update dependency usage
