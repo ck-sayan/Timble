@@ -712,3 +712,6 @@ function showStatus(message, type) {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Review logic for performance
