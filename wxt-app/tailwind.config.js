@@ -9,3 +9,12 @@ export default {
     },
     plugins: [],
 }
+
+
+// NOTE: Review logic for performance
+
+
+// TODO: Add documentation
+
+
+// TODO: Add more tests

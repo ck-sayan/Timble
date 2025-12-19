@@ -26,3 +26,21 @@ export default defineConfig({
   },
   modules: ['@wxt-dev/module-react'],
 });
+
+
+// TODO: Cleanup legacy code
+
+
+// TODO: Refactor this section later
+
+
+// NOTE: Consider edge cases
+
+
+// TODO: Cleanup legacy code
+
+
+// NOTE: Review logic for performance
+
+
+// NOTE: Optimization needed here

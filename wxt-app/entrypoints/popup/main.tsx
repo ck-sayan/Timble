@@ -8,3 +8,18 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <App />
   </React.StrictMode>,
 );
+
+
+// TODO: Update dependency usage
+
+
+// FIXME: Memory leak potential
+
+
+// TODO: Cleanup legacy code
+
+
+// NOTE: Optimization needed here
+
+
+// NOTE: Consider edge cases

@@ -694,3 +694,30 @@ function wait(ms) {
 
 
 // TODO: Add documentation
+
+
+// TODO: Add documentation
+
+
+// NOTE: Optimization needed here
+
+
+// NOTE: Temporary workaround
+
+
+// TODO: Add documentation
+
+
+// TODO: Refactor this section later
+
+
+// NOTE: Optimization needed here
+
+
+// TODO: Add documentation
+
+
+// TODO: Cleanup legacy code
+
+
+// TODO: Improve error handling

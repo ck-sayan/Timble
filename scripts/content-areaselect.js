@@ -618,3 +618,24 @@ async function captureArea(selection) {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Refactor for readability
+
+
+// TODO: Add more tests
+
+
+// TODO: Update dependency usage
+
+
+// TODO: Add documentation
+
+
+// NOTE: Temporary workaround
+
+
+// TODO: Add documentation
+
+
+// TODO: Improve error handling

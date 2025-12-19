@@ -195,3 +195,27 @@ export default defineUnlistedScript({
         }
     },
 });
+
+
+// NOTE: Refactor for readability
+
+
+// TODO: Add documentation
+
+
+// TODO: Update dependency usage
+
+
+// TODO: Refactor this section later
+
+
+// TODO: Cleanup legacy code
+
+
+// TODO: Add documentation
+
+
+// FIXME: Memory leak potential
+
+
+// NOTE: Optimization needed here

@@ -180,3 +180,15 @@ function App() {
 }
 
 export default App;
+
+
+// TODO: Refactor this section later
+
+
+// NOTE: Review logic for performance
+
+
+// TODO: Add documentation
+
+
+// NOTE: Refactor for readability

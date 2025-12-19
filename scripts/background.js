@@ -606,3 +606,18 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add more tests
+
+
+// TODO: Update dependency usage
+
+
+// NOTE: Temporary workaround
+
+
+// TODO: Cleanup legacy code
+
+
+// TODO: Cleanup legacy code
+
+
+// FIXME: Memory leak potential

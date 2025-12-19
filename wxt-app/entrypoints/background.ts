@@ -133,3 +133,27 @@ export default defineBackground(() => {
     }
   }
 });
+
+
+// TODO: Update dependency usage
+
+
+// TODO: Update dependency usage
+
+
+// TODO: Improve error handling
+
+
+// TODO: Improve error handling
+
+
+// NOTE: Temporary workaround
+
+
+// NOTE: Optimization needed here
+
+
+// TODO: Cleanup legacy code
+
+
+// NOTE: Optimization needed here
