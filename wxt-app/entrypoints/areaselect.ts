@@ -1,4 +1,4 @@
-import { defineUnlistedScript } from 'wxt/sandbox';
+
 
 export default defineUnlistedScript({
     main() {
@@ -148,12 +148,22 @@ export default defineUnlistedScript({
         }
 
         async function captureArea(selection: any) {
+            // HIDE OVERLAY BEFORE CAPTURE
+            const overlay = document.getElementById('timble-selection-overlay');
+            if (overlay) overlay.style.visibility = 'hidden';
+
+            // Short wait to ensure render update
+            await new Promise(resolve => setTimeout(resolve, 200));
+
             // Capture full viewport first
             const fullCapture = await new Promise<string>((resolve) => {
                 chrome.runtime.sendMessage({ action: 'captureVisibleTab' }, (response) => {
                     resolve(response?.dataUrl || '');
                 });
             });
+
+            // Restore overlay (optional, but good for UX if we were continuing)
+            if (overlay) overlay.remove(); // We are done anyway
 
             // Crop to selected area with high DPI support
             const devicePixelRatio = window.devicePixelRatio || 1;

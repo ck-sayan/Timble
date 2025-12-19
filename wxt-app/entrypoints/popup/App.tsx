@@ -4,11 +4,11 @@ import './style.css';
 const DAILY_FREE_LIMIT = 10;
 
 function App() {
-  const [usageCount, setUsageCount] = useState(0);
-  const [isPro, setIsPro] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [usageCount, setUsageCount] = useState<number>(0);
+  const [isPro, setIsPro] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const [status, setStatus] = useState<{ msg: string; type: 'success' | 'error' | 'info' | '' }>({ msg: '', type: '' });
-  const [showUpgrade, setShowUpgrade] = useState(false);
+  const [showUpgrade, setShowUpgrade] = useState<boolean>(false);
 
   useEffect(() => {
     // Initialize usage and pro status
@@ -21,26 +21,26 @@ function App() {
     init();
   }, []);
 
-  const getUsageToday = async () => {
+  const getUsageToday = async (): Promise<number> => {
     const today = new Date().toDateString();
-    const result = await chrome.storage.local.get(['usageDate', 'usageCount']);
+    const result = await browser.storage.local.get(['usageDate', 'usageCount']);
 
     if (result.usageDate !== today) {
-      await chrome.storage.local.set({ usageDate: today, usageCount: 0 });
+      await browser.storage.local.set({ usageDate: today, usageCount: 0 });
       return 0;
     }
-    return result.usageCount || 0;
+    return (result.usageCount as number) || 0;
   };
 
-  const checkProStatus = async () => {
-    const result = await chrome.storage.local.get(['isPro']);
-    return result.isPro || false;
+  const checkProStatus = async (): Promise<boolean> => {
+    const result = await browser.storage.local.get(['isPro']);
+    return (result.isPro as boolean) || false;
   };
 
   const incrementUsage = async () => {
     const today = new Date().toDateString();
     const usage = await getUsageToday();
-    await chrome.storage.local.set({
+    await browser.storage.local.set({
       usageDate: today,
       usageCount: usage + 1
     });
@@ -53,6 +53,7 @@ function App() {
   };
 
   const handleCapture = async (type: 'fullPage' | 'liveScroll' | 'areaSelect') => {
+    console.log('[Popup] Handle capture clicked:', type);
     const isFreeFeature = type === 'fullPage';
 
     if (!isFreeFeature && !isPro) {
@@ -65,10 +66,12 @@ function App() {
 
     setLoading(true);
     try {
+      console.log('[Popup] Sending message to background...');
       const response = await chrome.runtime.sendMessage({
         action: 'captureScreenshot',
         type: type
       });
+      console.log('[Popup] Response received:', response);
 
       if (response && response.success) {
         showStatusMsg('Screenshot captured successfully! ✓', 'success');
@@ -76,10 +79,11 @@ function App() {
           await incrementUsage();
         }
       } else {
+        console.error('[Popup] Error in response:', response);
         showStatusMsg('Error: ' + (response?.error || 'Unknown error'), 'error');
       }
     } catch (error: any) {
-      console.error('Capture error:', error);
+      console.error('[Popup] Message sending failed:', error);
       showStatusMsg('Failed to capture screenshot', 'error');
     } finally {
       setLoading(false);

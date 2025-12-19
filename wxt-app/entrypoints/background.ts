@@ -1,13 +1,16 @@
-import { defineBackground } from 'wxt/sandbox';
 // @ts-ignore
-import fullpagePath from '~/entrypoints/fullpage?script';
+import fullpagePath from './fullpage?script';
 // @ts-ignore
-import livescrollPath from '~/entrypoints/livescroll?script';
+import livescrollPath from './livescroll?script';
 // @ts-ignore
-import areaselectPath from '~/entrypoints/areaselect?script';
+import areaselectPath from './areaselect?script';
 
 export default defineBackground(() => {
   console.log('Timble background script loaded');
+
+  // Visual indicator that background script is running
+  chrome.action.setBadgeText({ text: 'ON' });
+  chrome.action.setBadgeBackgroundColor({ color: '#4caf50' });
 
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log('Message received:', request.action);
@@ -101,16 +104,20 @@ export default defineBackground(() => {
       }
 
       if (dataUrl) {
-        const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
-        const filename = `timble-${type}-${timestamp}.png`;
+        // Create a cleaner timestamp
+        const now = new Date();
+        const date = now.toISOString().split('T')[0];
+        const time = now.toTimeString().split(' ')[0].replace(/:/g, '-');
+        const filename = `timble-${type}-${date}_${time}.png`;
 
         console.log('Downloading:', filename);
 
-        // DIRECT DOWNLOAD using data URL to avoid URL.createObjectURL issues
+        // Direct download using data URL - safer for Service Workers
         chrome.downloads.download({
           url: dataUrl,
           filename: filename,
-          saveAs: true
+          saveAs: true,
+          conflictAction: 'uniquify'
         }, (downloadId) => {
           if (chrome.runtime.lastError) {
             console.error('Download failed:', chrome.runtime.lastError.message);

@@ -1,4 +1,4 @@
-import { defineUnlistedScript } from 'wxt/sandbox';
+
 
 export default defineUnlistedScript({
     main() {
@@ -46,11 +46,21 @@ export default defineUnlistedScript({
                     // Wait for content to load and animations to trigger
                     await wait(800);
 
+                    // Hide overlay specifically for capture
+                    if (overlay) overlay.style.visibility = 'hidden';
+                    await wait(250); // Increased wait time to ensure overlay is gone
+
                     // Capture this chunk
                     const dataUrl = await captureCurrentView();
+
+                    // Restore overlay
+                    if (overlay) overlay.style.visibility = 'visible';
+                    await wait(50);
+
                     captures.push({
                         dataUrl,
                         offsetY: scrollY,
+                        // Use actual image height later, but estimate here
                         height: Math.min(viewportHeight, fullHeight - scrollY)
                     });
                 }
@@ -166,18 +176,20 @@ export default defineUnlistedScript({
             ctx.fillStyle = '#FFFFFF';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-            for (const capture of captures) {
+            for (let index = 0; index < captures.length; index++) {
+                const capture = captures[index];
                 const img = new Image();
                 await new Promise<void>((resolve) => {
                     img.onload = () => resolve();
                     img.src = capture.dataUrl;
                 });
 
-                // Draw at high resolution coordinates
+                // Draw at high resolution coordinates with 1px overlap to prevent gaps
                 ctx.drawImage(
                     img,
                     0,
-                    capture.offsetY * devicePixelRatio
+                    // Use Math.floor to ensure integer alignment
+                    Math.floor(capture.offsetY * devicePixelRatio) - (index > 0 ? 1 : 0)
                 );
             }
 

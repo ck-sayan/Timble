@@ -1,4 +1,4 @@
-import { defineUnlistedScript } from 'wxt/sandbox';
+
 
 export default defineUnlistedScript({
     main() {
@@ -67,9 +67,34 @@ export default defineUnlistedScript({
                 // Hide scrollbars for cleaner capture
                 document.documentElement.style.overflow = 'hidden';
 
+                // Create and add overlay
+                const overlay = document.createElement('div');
+                overlay.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: #4f46e5;
+                    color: white;
+                    padding: 12px 24px;
+                    border-radius: 8px;
+                    font-family: system-ui;
+                    z-index: 999999;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                `;
+                overlay.textContent = 'Preparing Full Page Capture...';
+                document.body.appendChild(overlay);
+
+                const updateOverlay = (text: string) => {
+                    if (overlay) overlay.textContent = text;
+                };
+
                 // Capture each section
                 for (let i = 0; i < scrollSteps; i++) {
+                    const progress = Math.round(((i + 1) / scrollSteps) * 100);
+                    updateOverlay(`Capturing... ${progress}%`);
+
                     let scrollY = i * stepSize;
+                    // ... (rest of logic)
 
                     // Ensure we don't scroll past the bottom
                     if (scrollY + dimensions.viewportHeight > dimensions.height) {
@@ -85,9 +110,11 @@ export default defineUnlistedScript({
                         hiddenElements = hideFixedElements();
                     }
 
+                    // IMPORTANT: Hide overlay before capture so it doesn't appear in screenshot
+                    overlay.style.visibility = 'hidden';
                     await new Promise(resolve => setTimeout(resolve, 400)); // Increased delay
 
-                    // Retry logic for captureVisibleTab (Chrome rate limits after ~15 captures)
+                    // Retry logic for captureVisibleTab
                     let dataUrl = null;
                     let retries = 3;
 
@@ -108,13 +135,15 @@ export default defineUnlistedScript({
                         } catch (err: any) {
                             console.warn(`[Timble] Capture attempt ${attempt + 1} failed:`, err.message);
                             if (attempt < retries - 1) {
-                                // Wait longer before retry (exponential backoff)
                                 await new Promise(resolve => setTimeout(resolve, 500 * (attempt + 1)));
                             } else {
                                 throw new Error(`Failed after ${retries} attempts: ${err.message}`);
                             }
                         }
                     }
+
+                    // Restore overlay visibility
+                    overlay.style.visibility = 'visible';
 
                     // Restore elements immediately after capture
                     if (i > 0) {
@@ -135,10 +164,12 @@ export default defineUnlistedScript({
                     }
                 }
 
+                updateOverlay('Stitching images...');
                 console.log('[Timble] Captured', screenshots.length, 'sections, stitching...');
 
                 // Stitch screenshots
                 const canvas = document.createElement('canvas');
+                // ... (stitching logic) ... 
                 // Use device pixel ratio for high resolution
                 canvas.width = dimensions.viewportWidth * dimensions.devicePixelRatio;
                 canvas.height = dimensions.height * dimensions.devicePixelRatio;
@@ -167,6 +198,7 @@ export default defineUnlistedScript({
                 }
 
                 console.log('[Timble] Stitching complete, converting to blob...');
+                updateOverlay('Saving...');
 
                 // Convert to blob and send
                 const blob = await new Promise<Blob | null>(resolve => canvas.toBlob(resolve, 'image/png'));
@@ -185,7 +217,8 @@ export default defineUnlistedScript({
 
                     console.log(`[Timble] Sending ${chunks.length} chunks to background`);
 
-                    // Restore page state BEFORE sending message
+                    // Clean up before sending
+                    if (overlay) overlay.remove();
                     cleanupPage(originalScrollX, originalScrollY, originalOverflow, hiddenElements);
 
                     chrome.runtime.sendMessage({
@@ -201,6 +234,9 @@ export default defineUnlistedScript({
                 console.error('[Timble] Capture failed:', error);
 
                 // Clean up on error
+                const overlay = document.querySelector('div[style*="background: #4f46e5"]'); // Simple selector for our overlay
+                if (overlay) overlay.remove();
+
                 cleanupPage(originalScrollX, originalScrollY, originalOverflow, hiddenElements);
 
                 chrome.runtime.sendMessage({
