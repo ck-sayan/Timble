@@ -639,3 +639,6 @@ async function captureArea(selection) {
 
 
 // TODO: Improve error handling
+
+
+// FIXME: Potential edge case
