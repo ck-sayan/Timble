@@ -648,3 +648,6 @@ async function captureArea(selection) {
 
 
 // TODO: Improve error handling
+
+
+// TODO: Cleanup legacy code
