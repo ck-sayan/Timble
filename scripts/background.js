@@ -639,3 +639,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Refactor for readability
+
+
+// NOTE: Temporary workaround
