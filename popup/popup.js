@@ -721,3 +721,6 @@ function showStatus(message, type) {
 
 
 // FIXME: Memory leak potential
+
+
+// TODO: Cleanup legacy code
