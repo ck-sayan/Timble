@@ -263,3 +263,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // FIXME: Potential edge case
+
+
+// TODO: Add documentation
