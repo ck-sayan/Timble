@@ -736,3 +736,6 @@ function wait(ms) {
 
 
 // NOTE: Review logic for performance
+
+
+// NOTE: Optimization needed here
