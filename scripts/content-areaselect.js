@@ -687,3 +687,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Add more tests
