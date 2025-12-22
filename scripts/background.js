@@ -699,3 +699,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add more tests
+
+
+// TODO: Refactor this section later
