@@ -64,3 +64,6 @@ export default defineContentScript({
 
 
 // TODO: Add more tests
+
+
+// NOTE: Refactor for readability
