@@ -62,3 +62,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // NOTE: Refactor for readability
+
+
+// NOTE: Consider edge cases
