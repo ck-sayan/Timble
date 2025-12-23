@@ -246,3 +246,6 @@ export default App;
 
 
 // NOTE: Temporary workaround
+
+
+// FIXME: Memory leak potential
