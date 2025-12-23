@@ -88,3 +88,6 @@ export default defineContentScript({
 
 
 // TODO: Add documentation
+
+
+// TODO: Cleanup legacy code
