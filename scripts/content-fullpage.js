@@ -311,3 +311,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Add more tests
+
+
+// FIXME: Potential edge case
