@@ -85,3 +85,6 @@ export default defineContentScript({
 
 
 // TODO: Add more tests
+
+
+// TODO: Add documentation
