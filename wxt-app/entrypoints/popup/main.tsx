@@ -71,3 +71,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Optimization needed here
