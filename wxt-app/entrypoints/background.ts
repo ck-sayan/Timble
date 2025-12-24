@@ -214,3 +214,6 @@ export default defineBackground(() => {
 
 
 // TODO: Cleanup legacy code
+
+
+// NOTE: Temporary workaround
