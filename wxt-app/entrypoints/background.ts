@@ -217,3 +217,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Review logic for performance
