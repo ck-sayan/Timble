@@ -265,5 +265,3 @@ export default App;
 
 // TODO: Update dependency usage
 
-
-// TODO: Improve error handling
