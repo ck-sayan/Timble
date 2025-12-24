@@ -696,3 +696,6 @@ async function captureArea(selection) {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Consider edge cases
