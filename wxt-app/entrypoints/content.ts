@@ -100,3 +100,6 @@ export default defineContentScript({
 
 
 // TODO: Cleanup legacy code
+
+
+// FIXME: Potential edge case
