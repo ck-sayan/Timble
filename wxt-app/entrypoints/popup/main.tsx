@@ -101,3 +101,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Refactor for readability
