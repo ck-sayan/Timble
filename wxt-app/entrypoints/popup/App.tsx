@@ -270,3 +270,6 @@ export default App;
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Consider edge cases
