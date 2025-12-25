@@ -241,3 +241,6 @@ export default defineBackground(() => {
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Temporary workaround
