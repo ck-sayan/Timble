@@ -97,3 +97,6 @@ export default defineContentScript({
 
 
 // NOTE: Review logic for performance
+
+
+// TODO: Cleanup legacy code
