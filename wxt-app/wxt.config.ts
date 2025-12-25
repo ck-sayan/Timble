@@ -149,3 +149,6 @@ export default defineConfig({
 
 
 // NOTE: Optimization needed here
+
+
+// NOTE: Refactor for readability
