@@ -106,3 +106,6 @@ export default defineContentScript({
 
 
 // FIXME: Potential edge case
+
+
+// NOTE: Refactor for readability
