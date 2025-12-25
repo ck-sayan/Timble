@@ -338,3 +338,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Refactor this section later
+
+
+// NOTE: Consider edge cases
