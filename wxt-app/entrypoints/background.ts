@@ -256,3 +256,6 @@ export default defineBackground(() => {
 
 
 // TODO: Add documentation
+
+
+// FIXME: Potential edge case
