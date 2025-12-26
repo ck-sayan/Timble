@@ -781,3 +781,6 @@ function wait(ms) {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Refactor for readability
