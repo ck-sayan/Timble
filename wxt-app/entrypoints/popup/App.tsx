@@ -297,3 +297,6 @@ export default App;
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Temporary workaround
