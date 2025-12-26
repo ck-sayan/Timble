@@ -122,3 +122,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Temporary workaround
