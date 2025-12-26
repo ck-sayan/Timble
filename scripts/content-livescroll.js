@@ -775,3 +775,6 @@ function wait(ms) {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Refactor for readability
