@@ -756,3 +756,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Temporary workaround
+
+
+// FIXME: Potential edge case
