@@ -300,3 +300,6 @@ export default App;
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Review logic for performance
