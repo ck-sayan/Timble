@@ -127,3 +127,6 @@ export default defineContentScript({
 
 
 // FIXME: Memory leak potential
+
+
+// TODO: Cleanup legacy code
