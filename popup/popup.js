@@ -820,3 +820,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Optimization needed here
+
+
+// TODO: Cleanup legacy code
