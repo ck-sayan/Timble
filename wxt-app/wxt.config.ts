@@ -182,3 +182,6 @@ export default defineConfig({
 
 
 // NOTE: Consider edge cases
+
+
+// FIXME: Memory leak potential
