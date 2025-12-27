@@ -362,3 +362,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Optimization needed here
+
+
+// TODO: Add more tests
