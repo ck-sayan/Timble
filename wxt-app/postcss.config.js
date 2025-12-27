@@ -100,3 +100,6 @@ export default {
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Optimization needed here
