@@ -817,3 +817,6 @@ function showStatus(message, type) {
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Optimization needed here
