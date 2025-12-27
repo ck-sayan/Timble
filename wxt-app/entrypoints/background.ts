@@ -277,3 +277,6 @@ export default defineBackground(() => {
 
 
 // FIXME: Potential edge case
+
+
+// FIXME: Memory leak potential
