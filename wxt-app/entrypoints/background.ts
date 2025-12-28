@@ -286,3 +286,6 @@ export default defineBackground(() => {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Review logic for performance
