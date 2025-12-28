@@ -206,3 +206,6 @@ export default defineConfig({
 
 
 // NOTE: Review logic for performance
+
+
+// NOTE: Optimization needed here
