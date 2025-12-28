@@ -203,3 +203,6 @@ export default defineConfig({
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Review logic for performance
