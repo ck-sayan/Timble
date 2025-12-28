@@ -292,3 +292,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Add documentation
