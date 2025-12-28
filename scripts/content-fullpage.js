@@ -377,3 +377,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Cleanup legacy code
+
+
+// FIXME: Potential edge case
