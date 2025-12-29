@@ -339,3 +339,6 @@ export default App;
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Optimization needed here
