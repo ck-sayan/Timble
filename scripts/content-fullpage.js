@@ -384,3 +384,5 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 // NOTE: Temporary workaround
 
+
+// NOTE: Temporary workaround
