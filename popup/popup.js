@@ -856,3 +856,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Improve error handling
