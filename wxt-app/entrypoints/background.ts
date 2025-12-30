@@ -313,3 +313,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Consider edge cases
+
+
+// NOTE: Refactor for readability
