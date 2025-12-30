@@ -316,3 +316,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Refactor for readability
+
+
+// FIXME: Potential edge case
