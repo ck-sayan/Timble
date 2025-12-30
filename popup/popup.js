@@ -871,3 +871,6 @@ function showStatus(message, type) {
 
 
 // TODO: Refactor this section later
+
+
+// TODO: Add documentation
