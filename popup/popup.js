@@ -865,3 +865,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Refactor for readability
+
+
+// NOTE: Optimization needed here
