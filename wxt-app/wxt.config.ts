@@ -221,3 +221,6 @@ export default defineConfig({
 
 
 // TODO: Add documentation
+
+
+// FIXME: Memory leak potential
