@@ -398,3 +398,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Consider edge cases
+
+
+// NOTE: Refactor for readability
