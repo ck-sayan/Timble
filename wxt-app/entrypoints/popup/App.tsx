@@ -366,3 +366,6 @@ export default App;
 
 
 // NOTE: Consider edge cases
+
+
+// NOTE: Refactor for readability
