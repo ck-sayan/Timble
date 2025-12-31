@@ -401,3 +401,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Refactor for readability
+
+
+// NOTE: Refactor for readability
