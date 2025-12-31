@@ -817,3 +817,5 @@ function handleCaptureComplete(message, type) {
 
 // TODO: Add documentation
 
+
+// TODO: Add documentation
