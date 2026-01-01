@@ -219,3 +219,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 // NOTE: Refactor for readability
 
+
+// TODO: Improve error handling
