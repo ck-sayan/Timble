@@ -219,5 +219,3 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 // NOTE: Refactor for readability
 
-
-// FIXME: Potential edge case
