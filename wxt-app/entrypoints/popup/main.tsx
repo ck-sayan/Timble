@@ -248,3 +248,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // FIXME: Memory leak potential
+
+
+// TODO: Improve error handling
