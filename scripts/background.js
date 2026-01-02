@@ -843,3 +843,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Improve error handling
+
+
+// TODO: Update dependency usage
