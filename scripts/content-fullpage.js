@@ -434,3 +434,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Refactor for readability
