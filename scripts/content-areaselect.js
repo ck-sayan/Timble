@@ -834,3 +834,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Improve error handling
