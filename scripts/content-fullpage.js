@@ -443,3 +443,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // FIXME: Potential edge case
+
+
+// NOTE: Consider edge cases
