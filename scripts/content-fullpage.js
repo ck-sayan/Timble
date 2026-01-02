@@ -440,3 +440,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Refactor for readability
+
+
+// FIXME: Potential edge case
