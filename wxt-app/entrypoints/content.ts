@@ -211,3 +211,6 @@ export default defineContentScript({
 
 
 // TODO: Add more tests
+
+
+// NOTE: Review logic for performance
