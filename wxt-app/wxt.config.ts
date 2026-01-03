@@ -281,3 +281,6 @@ export default defineConfig({
 
 
 // TODO: Add documentation
+
+
+// NOTE: Refactor for readability
