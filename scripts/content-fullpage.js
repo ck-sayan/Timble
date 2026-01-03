@@ -452,3 +452,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Update dependency usage
+
+
+// NOTE: Review logic for performance
