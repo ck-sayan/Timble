@@ -299,3 +299,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // NOTE: Consider edge cases
+
+
+// NOTE: Refactor for readability
