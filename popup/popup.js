@@ -934,3 +934,6 @@ function showStatus(message, type) {
 
 
 // TODO: Cleanup legacy code
+
+
+// TODO: Refactor this section later
