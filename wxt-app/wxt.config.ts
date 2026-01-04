@@ -303,5 +303,3 @@ export default defineConfig({
 
 // NOTE: Optimization needed here
 
-
-// NOTE: Consider edge cases
