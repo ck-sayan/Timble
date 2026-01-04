@@ -299,3 +299,6 @@ export default defineConfig({
 
 
 // TODO: Add documentation
+
+
+// NOTE: Optimization needed here
