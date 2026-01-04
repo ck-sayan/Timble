@@ -296,3 +296,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // TODO: Cleanup legacy code
+
+
+// NOTE: Consider edge cases
