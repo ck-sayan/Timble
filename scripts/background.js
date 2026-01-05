@@ -888,3 +888,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Improve error handling
+
+
+// FIXME: Memory leak potential
