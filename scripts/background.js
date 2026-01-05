@@ -891,3 +891,6 @@ function handleCaptureComplete(message, type) {
 
 
 // FIXME: Memory leak potential
+
+
+// TODO: Cleanup legacy code
