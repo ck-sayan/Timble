@@ -262,3 +262,6 @@ export default defineContentScript({
 
 
 // NOTE: Optimization needed here
+
+
+// FIXME: Memory leak potential
