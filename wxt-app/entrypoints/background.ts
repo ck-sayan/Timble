@@ -394,3 +394,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Refactor for readability
+
+
+// NOTE: Refactor for readability
