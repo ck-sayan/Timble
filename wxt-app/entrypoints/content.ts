@@ -271,3 +271,6 @@ export default defineContentScript({
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Add documentation
