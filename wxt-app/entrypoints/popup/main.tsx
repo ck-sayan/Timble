@@ -311,3 +311,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // TODO: Add more tests
+
+
+// NOTE: Review logic for performance
