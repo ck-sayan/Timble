@@ -488,3 +488,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Add documentation
+
+
+// TODO: Cleanup legacy code
