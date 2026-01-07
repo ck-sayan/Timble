@@ -418,3 +418,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Cleanup legacy code
