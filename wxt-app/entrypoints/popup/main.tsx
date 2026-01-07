@@ -320,3 +320,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Review logic for performance
