@@ -326,3 +326,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // TODO: Update dependency usage
+
+
+// NOTE: Refactor for readability
