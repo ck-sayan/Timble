@@ -939,3 +939,6 @@ async function captureArea(selection) {
 
 
 // TODO: Update dependency usage
+
+
+// TODO: Improve error handling
