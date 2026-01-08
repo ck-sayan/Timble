@@ -421,3 +421,6 @@ export default defineBackground(() => {
 
 
 // TODO: Cleanup legacy code
+
+
+// FIXME: Potential edge case
