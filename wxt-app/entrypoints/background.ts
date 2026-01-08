@@ -430,3 +430,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Add documentation
