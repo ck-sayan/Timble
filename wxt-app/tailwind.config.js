@@ -306,3 +306,6 @@ export default {
 
 
 // TODO: Add more tests
+
+
+// FIXME: Memory leak potential
