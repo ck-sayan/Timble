@@ -948,3 +948,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Temporary workaround
