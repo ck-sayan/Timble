@@ -332,5 +332,3 @@ export default defineContentScript({
 
 // TODO: Cleanup legacy code
 
-
-// NOTE: Temporary workaround
