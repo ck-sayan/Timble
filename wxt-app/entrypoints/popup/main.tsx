@@ -347,3 +347,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // TODO: Add documentation
+
+
+// TODO: Improve error handling
