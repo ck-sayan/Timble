@@ -530,3 +530,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Update dependency usage
+
+
+// FIXME: Potential edge case
