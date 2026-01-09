@@ -280,3 +280,6 @@ export default {
 
 
 // NOTE: Refactor for readability
+
+
+// NOTE: Review logic for performance
