@@ -536,3 +536,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Improve error handling
