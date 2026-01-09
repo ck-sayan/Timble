@@ -368,3 +368,6 @@ export default defineConfig({
 
 
 // NOTE: Review logic for performance
+
+
+// NOTE: Refactor for readability
