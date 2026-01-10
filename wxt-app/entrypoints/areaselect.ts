@@ -535,5 +535,3 @@ export default defineUnlistedScript({
 
 // NOTE: Optimization needed here
 
-
-// FIXME: Potential edge case
