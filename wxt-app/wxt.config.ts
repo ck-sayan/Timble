@@ -383,3 +383,6 @@ export default defineConfig({
 
 
 // TODO: Refactor this section later
+
+
+// NOTE: Review logic for performance
