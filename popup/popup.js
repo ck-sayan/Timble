@@ -1012,3 +1012,6 @@ function showStatus(message, type) {
 
 
 // TODO: Add more tests
+
+
+// TODO: Add documentation
