@@ -466,3 +466,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Update dependency usage
