@@ -476,5 +476,3 @@ export default defineBackground(() => {
 
 // FIXME: Memory leak potential
 
-
-// NOTE: Refactor for readability
