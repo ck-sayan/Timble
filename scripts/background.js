@@ -966,3 +966,6 @@ function handleCaptureComplete(message, type) {
 
 
 // FIXME: Memory leak potential
+
+
+// FIXME: Potential edge case
