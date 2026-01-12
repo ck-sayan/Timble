@@ -490,3 +490,6 @@ export default defineBackground(() => {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Consider edge cases
