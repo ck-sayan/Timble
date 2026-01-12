@@ -502,3 +502,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Review logic for performance
+
+
+// FIXME: Memory leak potential
