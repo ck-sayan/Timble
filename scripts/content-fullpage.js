@@ -569,3 +569,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Refactor for readability
