@@ -513,3 +513,6 @@ export default App;
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Refactor for readability
