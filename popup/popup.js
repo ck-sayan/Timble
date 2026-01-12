@@ -1042,3 +1042,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Optimization needed here
+
+
+// FIXME: Potential edge case
