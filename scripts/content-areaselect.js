@@ -996,3 +996,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Review logic for performance
+
+
+// NOTE: Optimization needed here
