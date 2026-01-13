@@ -990,3 +990,6 @@ async function captureArea(selection) {
 
 
 // TODO: Cleanup legacy code
+
+
+// TODO: Update dependency usage
