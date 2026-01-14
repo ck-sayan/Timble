@@ -413,3 +413,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // TODO: Refactor this section later
+
+
+// NOTE: Refactor for readability
