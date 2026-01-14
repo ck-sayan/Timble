@@ -1002,3 +1002,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Consider edge cases
