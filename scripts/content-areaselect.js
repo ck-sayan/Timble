@@ -1023,3 +1023,6 @@ async function captureArea(selection) {
 
 
 // TODO: Cleanup legacy code
+
+
+// FIXME: Potential edge case
