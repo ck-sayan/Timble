@@ -553,3 +553,6 @@ export default defineBackground(() => {
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Consider edge cases
