@@ -1018,5 +1018,3 @@ function handleCaptureComplete(message, type) {
 
 // TODO: Refactor this section later
 
-
-// FIXME: Memory leak potential
