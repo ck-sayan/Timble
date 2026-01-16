@@ -1090,3 +1090,6 @@ function showStatus(message, type) {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Temporary workaround
