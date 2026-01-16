@@ -436,3 +436,6 @@ export default defineContentScript({
 
 
 // TODO: Improve error handling
+
+
+// TODO: Cleanup legacy code
