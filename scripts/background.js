@@ -1020,3 +1020,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Review logic for performance
