@@ -583,3 +583,6 @@ export default defineBackground(() => {
 
 
 // TODO: Improve error handling
+
+
+// TODO: Cleanup legacy code
