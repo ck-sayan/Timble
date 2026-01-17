@@ -445,3 +445,6 @@ export default defineContentScript({
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Refactor for readability
