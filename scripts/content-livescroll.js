@@ -1084,3 +1084,6 @@ function wait(ms) {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Review logic for performance
