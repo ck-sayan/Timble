@@ -1041,3 +1041,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Optimization needed here
