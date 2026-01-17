@@ -1038,3 +1038,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Consider edge cases
+
+
+// NOTE: Temporary workaround
