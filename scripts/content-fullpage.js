@@ -635,3 +635,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Update dependency usage
+
+
+// TODO: Cleanup legacy code
