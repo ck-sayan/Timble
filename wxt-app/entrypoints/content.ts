@@ -457,3 +457,6 @@ export default defineContentScript({
 
 
 // TODO: Add documentation
+
+
+// NOTE: Temporary workaround
