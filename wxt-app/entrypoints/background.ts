@@ -601,3 +601,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Consider edge cases
