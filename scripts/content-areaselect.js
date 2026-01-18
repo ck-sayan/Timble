@@ -1056,3 +1056,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Optimization needed here
+
+
+// TODO: Improve error handling
