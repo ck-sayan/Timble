@@ -1071,3 +1071,6 @@ async function captureArea(selection) {
 
 
 // TODO: Refactor this section later
+
+
+// NOTE: Temporary workaround
