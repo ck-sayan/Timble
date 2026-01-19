@@ -1068,3 +1068,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Optimization needed here
+
+
+// TODO: Refactor this section later
