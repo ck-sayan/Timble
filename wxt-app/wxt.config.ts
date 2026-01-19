@@ -536,3 +536,6 @@ export default defineConfig({
 
 
 // NOTE: Optimization needed here
+
+
+// FIXME: Memory leak potential
