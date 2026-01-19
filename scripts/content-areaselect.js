@@ -1068,3 +1068,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Refactor this section later
