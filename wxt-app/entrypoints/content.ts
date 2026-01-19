@@ -466,3 +466,6 @@ export default defineContentScript({
 
 
 // TODO: Add more tests
+
+
+// NOTE: Optimization needed here
