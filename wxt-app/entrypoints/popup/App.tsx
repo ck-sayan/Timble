@@ -612,3 +612,6 @@ export default App;
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Refactor for readability
