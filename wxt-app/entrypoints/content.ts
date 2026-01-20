@@ -493,3 +493,6 @@ export default defineContentScript({
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Consider edge cases
