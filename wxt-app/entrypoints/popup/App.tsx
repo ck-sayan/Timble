@@ -627,3 +627,6 @@ export default App;
 
 
 // TODO: Add documentation
+
+
+// NOTE: Consider edge cases
