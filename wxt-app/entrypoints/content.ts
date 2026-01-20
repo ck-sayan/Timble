@@ -490,3 +490,6 @@ export default defineContentScript({
 
 
 // NOTE: Optimization needed here
+
+
+// NOTE: Temporary workaround
