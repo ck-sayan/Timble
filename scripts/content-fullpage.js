@@ -647,3 +647,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Cleanup legacy code
