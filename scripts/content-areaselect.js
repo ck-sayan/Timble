@@ -1095,3 +1095,6 @@ async function captureArea(selection) {
 
 
 // TODO: Cleanup legacy code
+
+
+// TODO: Refactor this section later
