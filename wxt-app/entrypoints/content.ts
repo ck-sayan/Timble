@@ -481,3 +481,6 @@ export default defineContentScript({
 
 
 // NOTE: Optimization needed here
+
+
+// FIXME: Potential edge case
