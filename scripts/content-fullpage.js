@@ -662,3 +662,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Review logic for performance
