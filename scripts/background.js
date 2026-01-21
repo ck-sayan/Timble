@@ -1092,3 +1092,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Optimization needed here
