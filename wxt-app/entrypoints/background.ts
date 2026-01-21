@@ -623,3 +623,5 @@ export default defineBackground(() => {
 
 // NOTE: Optimization needed here
 
+
+// NOTE: Optimization needed here
