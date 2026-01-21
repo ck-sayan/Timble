@@ -1174,3 +1174,6 @@ function showStatus(message, type) {
 
 
 // TODO: Refactor this section later
+
+
+// NOTE: Optimization needed here
