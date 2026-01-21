@@ -1119,3 +1119,6 @@ async function captureArea(selection) {
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Consider edge cases
