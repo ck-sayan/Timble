@@ -502,3 +502,6 @@ export default defineContentScript({
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Add documentation
