@@ -506,3 +506,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Review logic for performance
