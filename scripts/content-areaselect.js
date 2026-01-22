@@ -1122,3 +1122,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Cleanup legacy code
