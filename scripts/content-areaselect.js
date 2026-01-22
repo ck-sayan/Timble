@@ -1140,3 +1140,6 @@ async function captureArea(selection) {
 
 
 // TODO: Improve error handling
+
+
+// TODO: Add more tests
