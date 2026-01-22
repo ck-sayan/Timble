@@ -654,3 +654,6 @@ export default App;
 
 
 // NOTE: Optimization needed here
+
+
+// NOTE: Refactor for readability
