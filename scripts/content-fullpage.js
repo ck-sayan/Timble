@@ -680,3 +680,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Cleanup legacy code
