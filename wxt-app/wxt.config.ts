@@ -593,3 +593,6 @@ export default defineConfig({
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Optimization needed here
