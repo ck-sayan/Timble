@@ -1152,3 +1152,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add more tests
+
+
+// FIXME: Memory leak potential
