@@ -561,3 +561,6 @@ export default {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Temporary workaround
