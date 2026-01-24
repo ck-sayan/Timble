@@ -692,3 +692,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Optimization needed here
+
+
+// TODO: Cleanup legacy code
