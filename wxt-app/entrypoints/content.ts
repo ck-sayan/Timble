@@ -554,5 +554,3 @@ export default defineContentScript({
 
 // NOTE: Consider edge cases
 
-
-// TODO: Add documentation
