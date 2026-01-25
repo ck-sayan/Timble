@@ -559,3 +559,6 @@ export default defineContentScript({
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Improve error handling
