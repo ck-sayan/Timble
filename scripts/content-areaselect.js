@@ -1167,3 +1167,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Consider edge cases
+
+
+// NOTE: Review logic for performance
