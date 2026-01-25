@@ -1195,3 +1195,6 @@ function wait(ms) {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Optimization needed here
