@@ -1158,3 +1158,6 @@ function handleCaptureComplete(message, type) {
 
 
 // TODO: Add more tests
+
+
+// TODO: Update dependency usage
