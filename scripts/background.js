@@ -1164,3 +1164,6 @@ function handleCaptureComplete(message, type) {
 
 
 // FIXME: Potential edge case
+
+
+// NOTE: Review logic for performance
