@@ -658,3 +658,6 @@ export default defineBackground(() => {
 
 
 // FIXME: Potential edge case
+
+
+// NOTE: Optimization needed here
