@@ -737,3 +737,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Optimization needed here
+
+
+// NOTE: Refactor for readability
