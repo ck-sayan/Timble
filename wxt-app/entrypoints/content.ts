@@ -577,3 +577,6 @@ export default defineContentScript({
 
 
 // TODO: Add more tests
+
+
+// TODO: Cleanup legacy code
