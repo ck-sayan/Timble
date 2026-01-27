@@ -586,3 +586,6 @@ export default defineContentScript({
 
 
 // FIXME: Memory leak potential
+
+
+// TODO: Refactor this section later
