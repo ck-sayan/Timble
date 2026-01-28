@@ -777,5 +777,3 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 // TODO: Add documentation
 
-
-// TODO: Add more tests
