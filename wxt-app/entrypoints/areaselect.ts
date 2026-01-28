@@ -757,5 +757,3 @@ export default defineUnlistedScript({
 
 // NOTE: Review logic for performance
 
-
-// TODO: Cleanup legacy code
