@@ -1212,3 +1212,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Update dependency usage
