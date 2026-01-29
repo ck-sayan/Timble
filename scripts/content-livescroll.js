@@ -1240,3 +1240,6 @@ function wait(ms) {
 
 
 // TODO: Add more tests
+
+
+// TODO: Add documentation
