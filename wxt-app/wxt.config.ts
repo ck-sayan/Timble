@@ -689,3 +689,6 @@ export default defineConfig({
 
 
 // FIXME: Potential edge case
+
+
+// NOTE: Optimization needed here
