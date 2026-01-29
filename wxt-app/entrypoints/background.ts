@@ -712,3 +712,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Refactor for readability
