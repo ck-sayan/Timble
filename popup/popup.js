@@ -1300,3 +1300,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Optimization needed here
+
+
+// TODO: Add documentation
