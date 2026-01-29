@@ -788,3 +788,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Optimization needed here
+
+
+// NOTE: Review logic for performance
