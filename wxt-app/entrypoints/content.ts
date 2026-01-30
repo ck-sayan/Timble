@@ -628,3 +628,6 @@ export default defineContentScript({
 
 
 // TODO: Refactor this section later
+
+
+// FIXME: Potential edge case
