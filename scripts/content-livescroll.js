@@ -1252,3 +1252,6 @@ function wait(ms) {
 
 
 // TODO: Cleanup legacy code
+
+
+// TODO: Add documentation
