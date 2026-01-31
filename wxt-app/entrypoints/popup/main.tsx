@@ -620,3 +620,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // TODO: Refactor this section later
+
+
+// NOTE: Temporary workaround
