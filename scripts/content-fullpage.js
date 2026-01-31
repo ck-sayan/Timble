@@ -827,3 +827,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Review logic for performance
