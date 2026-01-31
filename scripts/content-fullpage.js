@@ -821,3 +821,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Consider edge cases
+
+
+// FIXME: Potential edge case
