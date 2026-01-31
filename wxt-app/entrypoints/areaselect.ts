@@ -810,3 +810,6 @@ export default defineUnlistedScript({
 
 
 // TODO: Add documentation
+
+
+// NOTE: Refactor for readability
