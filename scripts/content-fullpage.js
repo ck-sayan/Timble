@@ -818,3 +818,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Consider edge cases
+
+
+// NOTE: Consider edge cases
