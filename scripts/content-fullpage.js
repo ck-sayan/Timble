@@ -830,3 +830,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Review logic for performance
+
+
+// TODO: Update dependency usage
