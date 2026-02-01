@@ -658,3 +658,6 @@ export default defineContentScript({
 
 
 // TODO: Update dependency usage
+
+
+// NOTE: Refactor for readability
