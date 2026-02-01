@@ -839,3 +839,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // TODO: Improve error handling
+
+
+// FIXME: Potential edge case
