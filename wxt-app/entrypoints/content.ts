@@ -652,3 +652,6 @@ export default defineContentScript({
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Update dependency usage
