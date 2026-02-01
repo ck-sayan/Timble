@@ -644,3 +644,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // NOTE: Review logic for performance
+
+
+// FIXME: Memory leak potential
