@@ -641,3 +641,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // TODO: Update dependency usage
+
+
+// NOTE: Review logic for performance
