@@ -754,3 +754,6 @@ export default defineBackground(() => {
 
 
 // NOTE: Refactor for readability
+
+
+// TODO: Update dependency usage
