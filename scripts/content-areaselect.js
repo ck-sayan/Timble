@@ -1323,3 +1323,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Consider edge cases
+
+
+// FIXME: Memory leak potential
