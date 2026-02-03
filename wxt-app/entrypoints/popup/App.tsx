@@ -777,3 +777,6 @@ export default App;
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Temporary workaround
