@@ -1348,3 +1348,6 @@ function showStatus(message, type) {
 
 
 // FIXME: Potential edge case
+
+
+// NOTE: Review logic for performance
