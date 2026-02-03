@@ -667,3 +667,6 @@ export default defineContentScript({
 
 
 // TODO: Add more tests
+
+
+// NOTE: Consider edge cases
