@@ -1344,3 +1344,6 @@ async function captureArea(selection) {
 
 
 // TODO: Add more tests
+
+
+// NOTE: Temporary workaround
