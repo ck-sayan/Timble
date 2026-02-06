@@ -784,3 +784,6 @@ export default defineBackground(() => {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Temporary workaround
