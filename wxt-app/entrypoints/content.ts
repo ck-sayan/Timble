@@ -715,3 +715,6 @@ export default defineContentScript({
 
 
 // NOTE: Consider edge cases
+
+
+// NOTE: Optimization needed here
