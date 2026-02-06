@@ -706,3 +706,6 @@ export default defineContentScript({
 
 
 // NOTE: Optimization needed here
+
+
+// TODO: Cleanup legacy code
