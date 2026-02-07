@@ -724,3 +724,6 @@ export default defineContentScript({
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Refactor this section later
