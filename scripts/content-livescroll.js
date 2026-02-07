@@ -1349,5 +1349,3 @@ function wait(ms) {
 
 // FIXME: Potential edge case
 
-
-// NOTE: Temporary workaround
