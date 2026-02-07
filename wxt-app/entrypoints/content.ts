@@ -718,3 +718,6 @@ export default defineContentScript({
 
 
 // NOTE: Optimization needed here
+
+
+// TODO: Update dependency usage
