@@ -816,3 +816,6 @@ export default App;
 
 
 // TODO: Update dependency usage
+
+
+// NOTE: Refactor for readability
