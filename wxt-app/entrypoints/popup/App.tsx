@@ -820,5 +820,3 @@ export default App;
 
 // NOTE: Refactor for readability
 
-
-// NOTE: Refactor for readability
