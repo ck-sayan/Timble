@@ -926,3 +926,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Refactor for readability
