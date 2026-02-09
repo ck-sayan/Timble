@@ -1441,3 +1441,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Review logic for performance
