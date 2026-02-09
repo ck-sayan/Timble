@@ -816,5 +816,3 @@ export default defineConfig({
 
 // NOTE: Refactor for readability
 
-
-// NOTE: Consider edge cases
