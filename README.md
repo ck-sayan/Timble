@@ -53,7 +53,7 @@ Click "Get Pro" in the extension popup to unlock:
 
 ### Capture Methods
 - **Full Page**: Scroll-and-stitch technique
-- **Live Scroll**: Smooth scroll with animation triggers
+- **Live Scroll**: Super smooth scroll with animation triggers
 - **Area Select**: Interactive drag-to-select UI
 
 ## 🔧 Development
