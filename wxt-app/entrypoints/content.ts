@@ -748,3 +748,6 @@ export default defineContentScript({
 
 
 // FIXME: Memory leak potential
+
+
+// TODO: Update dependency usage
