@@ -763,3 +763,6 @@ export default defineContentScript({
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Temporary workaround
