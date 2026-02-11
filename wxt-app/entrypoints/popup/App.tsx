@@ -855,3 +855,6 @@ export default App;
 
 
 // TODO: Add documentation
+
+
+// NOTE: Optimization needed here
