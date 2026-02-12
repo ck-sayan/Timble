@@ -1492,3 +1492,6 @@ function showStatus(message, type) {
 
 
 // TODO: Improve error handling
+
+
+// TODO: Add documentation
