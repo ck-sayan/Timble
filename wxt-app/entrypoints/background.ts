@@ -844,3 +844,6 @@ export default defineBackground(() => {
 
 
 // TODO: Add more tests
+
+
+// TODO: Improve error handling
