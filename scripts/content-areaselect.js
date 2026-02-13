@@ -1467,3 +1467,6 @@ async function captureArea(selection) {
 
 
 // TODO: Add documentation
+
+
+// TODO: Add more tests
