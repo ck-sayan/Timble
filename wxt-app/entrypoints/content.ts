@@ -793,3 +793,6 @@ export default defineContentScript({
 
 
 // TODO: Refactor this section later
+
+
+// NOTE: Optimization needed here
