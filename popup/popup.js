@@ -1513,3 +1513,6 @@ function showStatus(message, type) {
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Refactor for readability
