@@ -832,3 +832,6 @@ export default defineContentScript({
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Cleanup legacy code
