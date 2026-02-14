@@ -799,3 +799,6 @@ export default defineContentScript({
 
 
 // NOTE: Refactor for readability
+
+
+// NOTE: Optimization needed here
