@@ -802,3 +802,6 @@ export default defineContentScript({
 
 
 // NOTE: Optimization needed here
+
+
+// NOTE: Consider edge cases
