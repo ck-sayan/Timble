@@ -1359,3 +1359,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Review logic for performance
