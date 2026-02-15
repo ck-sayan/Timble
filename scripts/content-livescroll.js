@@ -1417,3 +1417,6 @@ function wait(ms) {
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Consider edge cases
