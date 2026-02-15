@@ -1543,3 +1543,6 @@ function showStatus(message, type) {
 
 
 // NOTE: Consider edge cases
+
+
+// TODO: Cleanup legacy code
