@@ -850,3 +850,6 @@ export default defineContentScript({
 
 
 // TODO: Update dependency usage
+
+
+// TODO: Add documentation
