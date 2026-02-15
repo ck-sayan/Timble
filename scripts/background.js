@@ -1365,3 +1365,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Temporary workaround
+
+
+// FIXME: Memory leak potential
