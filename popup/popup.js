@@ -1549,3 +1549,6 @@ function showStatus(message, type) {
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Consider edge cases
