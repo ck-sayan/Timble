@@ -844,3 +844,6 @@ export default defineContentScript({
 
 
 // TODO: Add documentation
+
+
+// NOTE: Refactor for readability
