@@ -842,3 +842,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // FIXME: Potential edge case
+
+
+// NOTE: Optimization needed here
