@@ -1389,3 +1389,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Optimization needed here
+
+
+// NOTE: Optimization needed here
