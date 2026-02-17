@@ -1447,3 +1447,6 @@ function wait(ms) {
 
 
 // NOTE: Temporary workaround
+
+
+// NOTE: Review logic for performance
