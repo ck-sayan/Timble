@@ -890,3 +890,6 @@ export default defineConfig({
 
 
 // TODO: Refactor this section later
+
+
+// NOTE: Refactor for readability
