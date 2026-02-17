@@ -886,3 +886,6 @@ export default defineBackground(() => {
 
 
 // FIXME: Memory leak potential
+
+
+// TODO: Add documentation
