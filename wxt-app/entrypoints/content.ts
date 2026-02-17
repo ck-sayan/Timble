@@ -868,3 +868,6 @@ export default defineContentScript({
 
 
 // TODO: Add documentation
+
+
+// TODO: Improve error handling
