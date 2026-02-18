@@ -871,3 +871,6 @@ export default defineContentScript({
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Consider edge cases
