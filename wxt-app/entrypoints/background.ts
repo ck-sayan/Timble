@@ -914,3 +914,5 @@ export default defineBackground(() => {
 
 // TODO: Improve error handling
 
+
+// NOTE: Refactor for readability
