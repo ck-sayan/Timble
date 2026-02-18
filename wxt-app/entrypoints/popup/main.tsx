@@ -866,3 +866,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // NOTE: Refactor for readability
+
+
+// NOTE: Optimization needed here
