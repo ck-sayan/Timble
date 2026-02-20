@@ -1055,3 +1055,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // FIXME: Potential edge case
+
+
+// FIXME: Potential edge case
