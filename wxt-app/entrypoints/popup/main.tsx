@@ -878,3 +878,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 
 // TODO: Cleanup legacy code
+
+
+// FIXME: Memory leak potential
