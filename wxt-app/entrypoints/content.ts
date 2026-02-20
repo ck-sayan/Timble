@@ -901,3 +901,6 @@ export default defineContentScript({
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Consider edge cases
