@@ -1061,3 +1061,6 @@ function cleanupPage(scrollX, scrollY, overflow, hiddenElements) {
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Add more tests
