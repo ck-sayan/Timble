@@ -940,3 +940,6 @@ export default defineBackground(() => {
 
 
 // TODO: Cleanup legacy code
+
+
+// NOTE: Refactor for readability
