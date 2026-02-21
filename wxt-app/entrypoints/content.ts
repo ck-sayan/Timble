@@ -907,3 +907,6 @@ export default defineContentScript({
 
 
 // TODO: Improve error handling
+
+
+// NOTE: Review logic for performance
