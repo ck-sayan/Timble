@@ -1443,3 +1443,6 @@ function handleCaptureComplete(message, type) {
 
 
 // FIXME: Memory leak potential
+
+
+// NOTE: Consider edge cases
