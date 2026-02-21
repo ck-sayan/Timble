@@ -1533,3 +1533,6 @@ async function captureArea(selection) {
 
 
 // NOTE: Refactor for readability
+
+
+// FIXME: Potential edge case
