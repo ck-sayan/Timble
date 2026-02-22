@@ -1516,3 +1516,6 @@ function wait(ms) {
 
 
 // TODO: Add documentation
+
+
+// NOTE: Temporary workaround
