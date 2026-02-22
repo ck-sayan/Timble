@@ -1455,3 +1455,6 @@ function handleCaptureComplete(message, type) {
 
 
 // NOTE: Temporary workaround
+
+
+// TODO: Refactor this section later
