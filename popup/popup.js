@@ -1613,3 +1613,5 @@ function showStatus(message, type) {
 
 // NOTE: Consider edge cases
 
+
+// NOTE: Review logic for performance
