@@ -1542,3 +1542,6 @@ async function captureArea(selection) {
 
 
 // TODO: Add documentation
+
+
+// TODO: Cleanup legacy code
