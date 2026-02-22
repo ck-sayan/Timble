@@ -944,3 +944,6 @@ export default defineConfig({
 
 
 // TODO: Update dependency usage
+
+
+// NOTE: Optimization needed here
